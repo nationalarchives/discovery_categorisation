@@ -1,0 +1,25 @@
+Development Server: wb-solrnutch1
+Port: 8986
+Core: DISCOVERY
+
+Categorisation search fields:
+
+DESCRIPTION
+TITLE
+CONTEXTDESCRIPTION
+CORPBODYS
+SUBJECTS
+PERSON_FULLNAME
+PLACE_NAME
+CATDOCREF
+
+
+Categorisation copy fields:
+
+text_gen field is used by the taxonomy team as default. The fields below are used ad hoc in
+category queries.
+
+textnocasnopunc (not case sensitive, punctuation removed)
+textcasnopunc (case sensitive, punctuation removed)
+textcaspunc (case sensitive, punctuation preserved)
+

@@ -1,5 +1,6 @@
 Development Server: wb-solrnutch1
 
+Port: 27017
 Database: taxonomy
 Collection: categories
 

@@ -1,0 +1,12 @@
+Development Server: wb-solrnutch1
+
+Database: taxonomy
+Collection: categories
+
+Collection fields:
+
+CIAID: string
+ttl: string
+qry: string
+SC: int
+lck: boolean

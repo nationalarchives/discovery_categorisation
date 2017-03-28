@@ -13,7 +13,7 @@ class MongoDBOperations:
     def get_category_query(self):
         tx_qry = col.find({'CIAID': self.tx_id}, {'qry': 1, '_id': 0})
         for qry, ttl in tx_qry:
-            print (qry['qry'], ttl['ttl'])
+            # print(qry['qry'], ttl['ttl'])
             return qry['qry'], ttl['ttl']
 
     def get_category_title(self):
@@ -21,3 +21,7 @@ class MongoDBOperations:
         for ttl in tx_ttl:
             return ttl['ttl']
 
+    def get_category_id(self):
+        tx_id = col.find({'CIAID': self.tx_id}, {'CIAID': 1, '_id': 0})
+        for CIAID in tx_id:
+            return CIAID['CIAID']

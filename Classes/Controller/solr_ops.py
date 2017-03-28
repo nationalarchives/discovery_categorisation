@@ -13,12 +13,12 @@ class SolrOperations:
         self.con = connection
 
     def add_taxonomy(self):
-        docs = {'DOCREFERENCE': self.iaid, 'TAXONOMY': self.tx_ttl + ' ' + self.tx_id, 'TAXONOMYID': self.tx_id}
+        docs = {'DOCREFERENCE': self.iaid, 'TAXONOMY': self.tx_id + ' ' + self.tx_ttl, 'TAXONOMYID': self.tx_id}
         for doc in docs:
             self.con.add([doc], fieldUpdates={'TAXONOMY': 'add', 'TAXONOMYID': 'add'})
 
     def remove_taxonomy(self):
-        docs = {'DOCREFERENCE': self.iaid, 'TAXONOMY': self.tx_ttl + ' ' + self.tx_id, 'TAXONOMYID': self.tx_id}
+        docs = {'DOCREFERENCE': self.iaid, 'TAXONOMY': self.tx_id + ' ' + self.tx_ttl, 'TAXONOMYID': self.tx_id}
         for doc in docs:
             self.con.add([doc], fieldUpdates={'TAXONOMY': 'remove', 'TAXONOMYID': 'remove'})
 

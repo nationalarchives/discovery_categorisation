@@ -25,3 +25,8 @@ class MongoDBOperations:
         tx_id = col.find({'CIAID': self.tx_id}, {'CIAID': 1, '_id': 0})
         for CIAID in tx_id:
             return CIAID['CIAID']
+
+    def get_category_score(self):
+        tx_sc = col.find({'CIAID': self.tx_id}, {'SC': 1, '_id': 0})
+        for sc in tx_sc:
+            return sc['SC']
